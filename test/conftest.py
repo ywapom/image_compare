@@ -11,7 +11,7 @@ def browser_name(request):
     browser = request.config.getoption("--browser")
     return browser
 
-@pytest.yield_fixture
+@pytest.fixture
 def my_driver(request):
     browser = request.config.getoption("--browser")
     if browser == "chrome":
